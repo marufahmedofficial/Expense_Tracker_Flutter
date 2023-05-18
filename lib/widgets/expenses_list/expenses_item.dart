@@ -1,6 +1,7 @@
-import 'package:expense_tracker/models/expense.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '../../models/expense.dart';
 
 class ExpenseItem extends StatelessWidget {
   const ExpenseItem(
