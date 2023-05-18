@@ -18,7 +18,7 @@ class _NewExpenseState extends State<NewExpense> {
   final _titleController = TextEditingController();
   final _amountController = TextEditingController();
   DateTime? _selectedDate;
-  Category _selectedCategory = Category.leisure;
+  Category _selectedCategory = Category.vacation;
 
   void _presentDatePicker() async {
     final now = DateTime.now();
@@ -120,7 +120,7 @@ class _NewExpenseState extends State<NewExpense> {
                     ),
                   ],
                   decoration: InputDecoration(
-                    prefixText: '₹',
+                    prefixText: '৳',
                     label: Text(
                       'Amount',
                       style: GoogleFonts.lato(
@@ -139,46 +139,7 @@ class _NewExpenseState extends State<NewExpense> {
                   ),
                 ),
               ),
-              // Expanded(
-              //   child: Row(
-              //     mainAxisAlignment: MainAxisAlignment.end,
-              //     crossAxisAlignment: CrossAxisAlignment.end,
-              //     children: [
-              //       Expanded(
-              //         child: TextFormField(
-              //           decoration: InputDecoration(
-              //             enabledBorder: OutlineInputBorder(
-              //               borderRadius: BorderRadius.circular(20),
-              //               borderSide: const BorderSide(
-              //                 width: 1,
-              //                 color: Color.fromARGB(90, 64, 67, 255),
-              //               ),
-              //             ),
-              //           ),
-              //           readOnly: true,
-              //           controller: TextEditingController(
-              //             text: _selectedDate == null
-              //                 ? 'No Date Selected'
-              //                 : formatter.format(_selectedDate!),
-              //           ),
-              //           style: GoogleFonts.lato(
-              //             fontWeight: FontWeight.bold,
-              //             fontSize: 18,
-              //             color: const Color.fromARGB(255, 64, 67, 255),
-              //           ),
-              //         ),
-              //       ),
-              //       IconButton(
-              //         alignment: Alignment.topRight,
-              //         onPressed: () {
-              //           _presentDatePicker();
-              //         },
-              //         icon: const Icon(Icons.calendar_today_outlined),
-              //       ),
-              //     ],
-              //   ),
-              // ),
-              // Spacer(),
+
               const SizedBox(
                 width: 10,
               ),
@@ -253,7 +214,7 @@ class _NewExpenseState extends State<NewExpense> {
           Row(
             children: [
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 9),
+                padding: const EdgeInsets.symmetric(horizontal: 3),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     shape: BoxShape.rectangle,
@@ -274,7 +235,7 @@ class _NewExpenseState extends State<NewExpense> {
                           child: Text(
                             category.name.toUpperCase(),
                             style: GoogleFonts.lato(
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.normal,
                               //fontSize: 18,
                             ),
                           ),
