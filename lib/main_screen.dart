@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
@@ -159,6 +160,25 @@ class _ExpensesState extends State<Expenses> {
           Expanded(
             child: mainContent,
           ),
+          SizedBox.fromSize(
+            size: Size(56, 56),
+            child: ClipOval(
+              child: Material(
+                color: Colors.greenAccent,
+                child: InkWell(
+                  splashColor: Colors.green,
+                  onTap: () {},
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(CupertinoIcons.add), // <-- Icon
+                      Text("Add"), // <-- Text
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );
