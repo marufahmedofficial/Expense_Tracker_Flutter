@@ -128,6 +128,8 @@ class _ExpensesState extends State<Expenses> {
     }
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
+        elevation: 3,
         title: Text(
           'Expense Tracker',
           style: GoogleFonts.lato(
@@ -156,7 +158,7 @@ class _ExpensesState extends State<Expenses> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Chart(expenses: _registeredExpenses),          
+          Chart(expenses: _registeredExpenses),
           Expanded(
             child: mainContent,
           ),
@@ -167,7 +169,9 @@ class _ExpensesState extends State<Expenses> {
                 color: Colors.greenAccent,
                 child: InkWell(
                   splashColor: Colors.green,
-                  onTap: () {},
+                  onTap: () {
+                    _openAddExpenseOverlay();
+                  },
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
